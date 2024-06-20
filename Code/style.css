@@ -1,0 +1,1043 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bowlby+One&family=Concert+One&family=Lilita+One&family=Protest+Strike&family=Shippori+Antique+B1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Body styling */
+body {
+    background-image: url('../Images/Background.png'); /* Background image for the body */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-color: black; /* Fallback background color */
+    background-size: cover; /* Ensures the background image covers the entire background */
+    background-attachment: fixed; /* Keeps the background image fixed during scroll */
+}
+
+/* Text selection styling */
+::selection {
+    background-color: #9ca1e7; /* Highlight color for selected text */
+}
+
+/* HTML overflow styling */
+html {
+    overflow: scroll; /* Enables scrolling */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+}
+
+/* Webkit scrollbar styling */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Section styling */
+section {
+    opacity: 0; /* Makes sections initially invisible */
+    z-index: auto;
+    width: auto;
+}
+
+/* Hidden class styling */
+.hidden {
+    opacity: 0; /* Makes hidden elements invisible */
+    filter: blur(5px); /* Applies blur effect */
+    transform: translateX(-100%); /* Moves elements out of view */
+    transition: all 1s; /* Transition for all properties */
+    transition-delay: 5ms; /* Initial transition delay */
+}
+
+/* Individual delay for hidden elements */
+.hidden:nth-child(1) {
+    transition-delay: 100ms;
+}
+
+.hidden:nth-child(2) {
+    transition-delay: 10ms;
+}
+
+.hidden:nth-child(4) {
+    transition-delay: 70ms;
+}
+
+.hidden:nth-child(6) {
+    transition-delay: 50ms;
+}
+
+.hidden:nth-child(7) {
+    transition-delay: 0;
+}
+
+.hidden:nth-child(8) {
+    transition-delay: 25ms;
+}
+
+/* Show class styling */
+.show {
+    opacity: 1; /* Makes elements visible */
+    transform: translateX(0); /* Resets transform */
+    z-index: -20;
+    filter: blur(0); /* Removes blur */
+}
+
+/* Anchor tag styling */
+a {
+    text-decoration: none; /* Removes underline from links */
+}
+
+/* Logo styling */
+.Hikolakita-Logo {
+    float: left;
+    margin-left: 1.5%;
+    width: 60px;
+    height: 60px;
+    top: 7px;
+    cursor: pointer;
+    transition: 1s;
+    position: absolute;
+    z-index: 6;
+    opacity: 0.9;
+}
+
+/* Logo hover effect */
+.Hikolakita-Logo:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Logo text styling */
+.Hikolakita-txt {
+    color: white;
+    font-size: 27px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    float: left;
+    margin-left: 98px;
+    margin-top: 22.5px;
+    cursor: pointer;
+    transition: 1s;
+    position: absolute;
+}
+
+/* Navigation bar container styling */
+.nav-bar-container {
+    margin-top: 27px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    z-index: -30;
+}
+
+/* Navigation bar buttons styling */
+.nav-bar-buttons {
+    color: white;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    margin: 25px;
+    margin-top: 35px;
+    transition: 0.5s;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+/* Navigation bar buttons hover effect */
+.nav-bar-buttons:hover {
+    color: #0ef;
+    margin-top: 20px;
+}
+
+/* Navigation bar buttons span styling */
+.nav-bar-buttons span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid #0ef;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .5s;
+}
+
+/* Navigation bar buttons hover effect for span */
+.nav-bar-buttons:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    margin-top: 10px;
+}
+
+/* Support button styling */
+.support-button {
+    text-decoration: none; /* Removes underline from text */
+    transform: translateX(0); /* Ensures button is in place */
+    margin-right: 20px;
+    margin-top: 24.5px;
+    border-radius: 10px;
+    border: none;
+    right: 10px;
+    background: linear-gradient(to left, #9e57fc, #8a59fd); /* Gradient background */
+    color: #fff;
+    z-index: 9999;
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/* Support button hover effect */
+.support-button:hover {
+    box-shadow: 0 0 10px #720ad3;
+}
+
+/* Support button before pseudo-element styling */
+.support-button::before {
+    content: '';
+    background: repeating-linear-gradient(white, rgb(209, 209, 209));
+    opacity: 0.2;
+    z-index: 2;
+    left: -100%;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.8s;
+    transform: rotate(0deg);
+    border-radius: 1px;
+    font-weight: bold;
+}
+
+/* Support button hover effect */
+.support-button:hover::before {
+    left: 100%; /* Moves the before pseudo-element to the right */
+}
+
+/* Support button text styling */
+.support-button_txt {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+    color: white;
+    margin: 10px 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Support button text hover effect */
+.support-button_txt a  {
+    text-decoration: none;
+    color: white;
+}
+
+/* Welcome text styling */
+.welcome-text {
+    color: white;
+    font-size: 78px;
+    font-family: 'Work Sans';
+    margin: auto;
+    margin-top: 6.5%;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Introduce text parent container */
+.introduce-text_parent {
+    width: 380px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Introduce text styling */
+.introduce-text {
+    color: rgb(141, 141, 141);
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+/* Introduce text hover effect */
+.introduce-text:hover {
+    pointer-events: auto; /* Enables pointer events on hover */
+}
+
+/* Introduce text span styling */
+.introduce-text span {
+    transition: 0.3s;
+}
+
+/* Introduce text hover effect on spans */
+.introduce-text:hover span:nth-child(1) {
+    margin-left: 20px;
+}
+
+.introduce-text:hover span:nth-child(2) {
+    margin-right: 10px;
+}
+
+.introduce-text:hover span:nth-child(1)::after {
+    content: ""; /* Adds content after first span on hover */
+}
+
+.introduce-text:hover span {
+    color: #fff; /* Changes text color on hover */
+    font-size: 32px; /* Increases font size */
+    letter-spacing: 0.3em; /* Adjusts letter spacing */
+    text-shadow: 
+        0 0 10px #fff,
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 40px #fff,
+        0 0 120px #fff,
+        0 0 260px #fff; /* Adds multiple text shadows */
+}
+
+/* Menu window styling */
+.menu-window {
+    background: linear-gradient(to bottom left, #8c53fc, #575ffe); /* Gradient background */
+    background-clip: padding-box;
+    border: 6px solid rgba(255, 255, 255, 0.15); /* Border styling */
+    border-radius: 30px; /* Border radius */
+    margin: auto;
+    margin-top: 100px;
+    height: 235px;
+    width: 52%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Menu window hover effect */
+.menu-window:hover {
+    border-radius: 10px; /* Adjusts border radius on hover */
+    border: 6px solid rgba(255, 255, 255, 0.15); /* Border styling on hover */
+}
+
+/* Menu window text styling */
+.menu-window_text {
+    color: rgb(230, 230, 230);
+    font-size: 39px;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    text-align: center;
+    line-height: 1.5em;
+    padding: 30px;
+}
+
+/* Category buttons styling */
+.category-buttons {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 40px #ffffff, 0 0 40px #03bcf4; /* Text shadow effect */
+    font-size: 50px;
+    margin-top: 14%;
+    font-family: 'BaiJamjuree', sans-serif;
+    margin-left: auto;
+    text-align: center;
+}
+
+/* Skills section styling */
+#skills {
+    margin-top: 6%;
+}
+
+/* About container styling */
+/*.about-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+*/
+
+.container-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.description-container, .skills-container, .languages-container {
+    width: 22%;
+    min-width: 300px; /* Set a minimum width to maintain readability */
+    background: linear-gradient(rgb(192, 201, 255), rgb(200, 165, 223)); /* Gradient background */
+    height: 570px;
+    opacity: 0.7;
+    border-radius: 15px; /* Border radius */
+    margin: 45px; /* Adjust margin for spacing */
+    z-index: auto;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.4s;
+    overflow: hidden; /* Prevent scrolling */
+    display: flex;
+    flex-direction: column; /* Ensure the content stacks vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Start content at the top */
+}
+
+
+
+/* Hover effect for Description, Skills, Languages containers */
+.description-container:hover, .skills-container:hover, .languages-container:hover {
+    opacity: 0.8; /* Adjusts opacity on hover */
+    transform: scale(105%); /* Scales up the size on hover */
+}
+
+/* About title styling */
+.about-title {
+    font-size: 32px;
+    z-index: 1;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* About text styling */
+.about-text {
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-left: 45px;
+    line-height: 30px;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+/* Languages section styling */
+#languages1 {
+    text-align: center;
+    margin-top: 12%;
+    margin-bottom: 3px;
+}
+
+#languages {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 3px;
+}
+
+/* Tree styling */
+#tree {
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: center;
+    margin: auto;
+    font-size: 25px;
+}
+
+/* Progress bar styling */
+progress {
+    height: 20px;
+    color: #0ef; /* Progress bar color */
+}
+
+/* Charts container styling */
+.charts {
+    width: 350px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: auto;
+    padding: 30px;
+    opacity: 0.6;
+    border-radius: 20px; /* Border radius */
+    margin-top: 105px;
+}
+
+/* Diagram title styling */
+.diagram-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(146, 146, 146);
+    margin: auto;
+    margin-top: 75px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Horizontal line styling */
+.horizontal-line {
+    height: 3px;
+    width: 400px;
+    background-color: #c3dbff; /* Background color */
+    position: absolute;
+    opacity: 0.6;
+    margin-top: 559px; /* Top margin */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px; /* Border radius */
+}
+
+/* Bar styling */
+.bar {
+    width: 50px;
+    background-color: #d1d8ff; /* Background color */
+    border-radius: 5px; /* Border radius */
+    opacity: 0.9;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    text-align: center;
+}
+
+/* Bar before pseudo-element styling */
+.bar::before {
+    position: absolute;
+    content: '60'; /* Default content */
+    top: -40px; /* Position from top */
+    left: 0;
+    right: 0;
+    color: #d8a7ff; /* Text color */
+    opacity: 0.9;
+    font-size: 25px; /* Font size */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Different content for each bar */
+.bar:nth-child(1)::before {
+    content: '1095';
+}
+
+.bar:nth-child(2)::before {
+    content: '200';
+}
+
+.bar:nth-child(3)::before {
+    content: '25';
+}
+
+.bar:nth-child(4)::before {
+    content: '3000';
+}
+
+/* Bar hover effect */
+.bar:hover {
+    opacity: 1; /* Adjusts opacity on hover */
+}
+
+.bar:hover::before {
+    opacity: 1; /* Adjusts pseudo-element opacity on hover */
+}
+
+/* Icons container styling */
+.icons-container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Icons text styling */
+.icons-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #03f467; /* Text color */
+    font-weight: bold;
+    margin: 35.5px;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Project container styling */
+.project-container {
+    width: 90%;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 40px;
+    height: 450px;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    display: flex;
+    background-color: rgba(85, 66, 138, 0.3); /* Background color with opacity */
+    border: 1px solid rgb(146, 146, 146); /* Border */
+    position: relative;
+    overflow-x: auto; /* Horizontal overflow scroll */
+    overflow-y: hidden;
+    padding: 20px; /* Added padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Styles pour la barre de défilement Webkit */
+.project-container::-webkit-scrollbar {
+    width: 1px; /* Largeur de la barre de défilement */
+    height: 1px; /* Hauteur de la barre de défilement pour le défilement horizontal */
+}
+
+.project-container::-webkit-scrollbar-track {
+    background: transparent /* Couleur de fond de la piste */
+}
+
+.project-container::-webkit-scrollbar-thumb {
+    background: transparent; /* Couleur de la poignée de défilement */
+    border-radius: 14px; /* Arrondir les coins de la poignée de défilement */
+}
+
+.project-container::-moz-scrollbar-button {
+    display: none;
+}
+
+/* Styles pour la barre de défilement de Firefox */
+.project-container {
+    scrollbar-width: 1px; /* Mince */
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Couleur de la poignée et de la piste */
+}
+
+/* Text cadre styling */
+.text-cadre {
+    border-radius: 20px;
+    opacity: 0.7;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 100px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.project-text {
+    color: #f3e2ff; /* Couleur du texte */
+    font-size: 23px;
+    margin-top: 105px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center; /* Centrer le texte */
+}
+
+/* Project card styling */
+.project-card {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 30px;
+    border: 1px solid gray;
+    margin-top: 140px;
+    cursor: pointer;
+    min-width: 250px;
+    transition: 0.75s; /* Transition duration */
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+/* Project card hover effect */
+.project-card:hover {
+    transform: scale(115%); /* Scales up on hover */
+    transform: blur(5px); /* Adds blur effect on hover */
+    background-color: #f8edff; /* Background color change on hover */
+}
+
+/* Project text link styling */
+.project-text a {
+    cursor: pointer;
+    color: #4fd6ff; /* Link color */
+    text-decoration: underline; /* Underline on hover */
+    transition: 0.3s;
+}
+
+.project-text a:hover {
+    cursor: pointer;
+    color: hsl(194, 100%, 83%); /* Link color on hover */
+    text-decoration: underline;
+}
+
+/* Form container styling */
+.form {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    border-radius: 15px;
+    background: linear-gradient(#401c5e, #5e2e85); /* Gradient background */
+    opacity: 1;
+    width: 50%;
+    height: 700px;
+    position: relative;
+    margin-top: 70px;
+}
+
+/* Form after pseudo-element styling */
+.form::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 99%;
+    border-radius: 15px;
+    height: 99%;
+    background-color: #644081; /* Background color */
+    opacity: 0.3; /* Opacity */
+}
+
+/* Input field styling */
+.name,
+.email,
+.message {
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    border-radius: 35px;
+    border: 1px solid rgb(255, 255, 255); /* Border color */
+    padding-left: 10px;
+}
+
+/* Input placeholder styling */
+.name::placeholder,
+.email::placeholder,
+.message::placeholder {
+    color: white; /* Placeholder color */
+}
+
+/* Input styling */
+input {
+    text-align: center;
+    color: white; /* Text color */
+}
+
+/* Input focus styling */
+input:focus {
+    border-color: white; /* Border color on focus */
+}
+
+/* Input name styling */
+.input-name {
+    color: rgb(156, 156, 156); /* Text color */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Textarea styling */
+textarea {
+    resize: none; /* Prevents resizing */
+    opacity: 0.6;
+    border-radius: 10px;
+    width: 250px;
+    height: 85px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Box shadow */
+    border: 3px solid transparent; /* Border */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    position: relative;
+    margin: auto;
+}
+
+/* Textarea placeholder styling */
+textarea::placeholder {
+    color: gray; /* Placeholder color */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Name input specific styling */
+#name {
+    height: 40px;
+}
+
+/* Email input specific styling */
+#email {
+    height: 40px;
+}
+
+/* Textarea first and second child styling */
+textarea:nth-child(1),
+textarea:nth-child(2) {
+    height: 40px;
+}
+
+/* Textarea hover styling */
+textarea:hover {
+    border: 3px solid rgb(202, 123, 255); /* Border color on hover */
+}
+
+/* Textarea focus styling */
+textarea:focus {
+    border: none; /* Removes border on focus */
+    border: 3px solid rgb(140, 0, 255); /* Border color on focus */
+    text-decoration: none; /* Removes text decoration */
+    outline: none; /* Removes outline */
+}
+
+/* Send button styling */
+.send-button {
+    width: 100px;
+    height: 35px;
+    background: linear-gradient(rgb(123, 53, 255), rgb(76, 0, 255)); /* Gradient background */
+    border-radius: 10px; /* Border radius */
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border: none;
+    opacity: 0.8;
+    transition: 0.3s; /* Transition duration */
+    color: white; /* Text color */
+    cursor: pointer;
+}
+
+/* Send button hover effect */
+.send-button:hover {
+    opacity: 1; /* Adjusts opacity on hover */
+}
+
+/* Cookies notification styling */
+.cookies {
+    width: 100%;
+    margin: auto;
+    height: 40px;
+    background-color: #42438f; /* Background color */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text */
+    color: white; /* Text color */
+    margin-top: 110px; /* Top margin */
+    font-size: 15px; /* Font size */
+    text-align: center; /* Text alignment */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 15px; /* Border radius */
+}
+
+/* Contact images container */
+.contact-images {
+    display: flex; /* Utilisation de Flexbox pour aligner les images horizontalement */
+    justify-content: center; /* Centres les images horizontalement */
+    gap: 20px; /* Espace entre les images */
+    margin-top: 0; /* Marge supérieure */
+}
+
+
+/* Contact image styling */
+.contact-image {
+    width: 50px; /* Fixed width for all images */
+    height: 50px; /* Fixed height for all images */
+    object-fit: contain; /* Maintains image proportions within specified dimensions */
+    opacity: 1; /* Initial opacity */
+    filter: brightness(0.8); /* Brightness filter */
+    transition: 0.3s; /* Transition duration */
+}
+
+/* Contact image hover effect */
+.contact-image:hover {
+    transform: rotate(10deg) scale(1.1); /* Rotation and scale on hover */
+    filter: brightness(1); /* Adjusted brightness on hover */
+}
+
+
+/* Extra small (XS) */
+@media (max-width: 320px) {
+    /* Your styles for very small screens */
+}
+
+/* Small (SM) */
+@media (min-width: 321px) and (max-width: 767px) {
+    /* Your styles for small screens */
+}
+
+/* Medium (MD) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Your styles for medium screens */
+
+    
+    .welcome-text {
+        font-size: 53px;
+        margin-top: 85px;
+    }
+
+    .introduce-text {
+        font-size: 25px;
+    }
+
+    .menu-window {
+        width: 60%;
+    }
+
+    .nav-bar-container {
+        margin-top: 30px;
+    }
+
+    .nav-bar-buttons {
+        font-size: 15px;
+    }
+
+    .Hikolakita-Logo {
+        margin-top: 10px;
+    }
+
+    .Hikolakita-txt {
+        margin-top: 37px;
+        font-size: 20px;
+        margin-left: 70px;
+    }
+
+    .menu-window_text {
+        font-size: 35px;
+    }
+
+    #about {
+        margin-top: 215px;
+    }
+
+    #languages {
+        margin-top: 11%;
+    }
+
+    #languages1 {
+        margin-top: 2%;
+    }
+
+    #languages5 {
+        margin-bottom: 50px;
+    }
+
+    .container-wrapper {
+        display: flex;
+        justify-content: space-around; /* Distribute space evenly */
+        flex-wrap: wrap; /* Allow wrapping for multiple rows if necessary */
+        gap: 35px; /* Additional spacing between the items */
+        margin-top: 50px;
+        align-items: stretch;
+        padding-bottom: 30px;
+    }
+
+    .description-container, .skills-container, .languages-container {
+        width: 22%;
+        min-width: 300px; /* Set a minimum width to maintain readability */
+        background: linear-gradient(rgb(192, 201, 255), rgb(200, 165, 223)); /* Gradient background */
+        height: auto;
+        opacity: 0.7;
+        border-radius: 15px; /* Border radius */
+        margin: 20px; /* Adjust margin for spacing */
+        z-index: auto;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.4s;
+        overflow: hidden; /* Prevent scrolling */
+        display: flex;
+        flex-direction: column; /* Ensure the content stacks vertically */
+        align-items: center; /* Center content horizontally */
+        justify-content: flex-start; /* Start content at the top */
+    }
+
+    .description-container, .skills-container, .languages-container::after {
+        content: "";
+        flex:1;
+    }
+}
+
+/* Large (LG) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    /* Your styles for large screens */
+
+    .welcome-text {
+        font-size: 60px;
+        margin-top: 85px;
+    }
+
+    .introduce-text {
+        font-size: 30px;
+    }
+
+    .menu-window {
+        width: 70%;
+    }
+
+    .nav-bar-container {
+        margin-top: 30px;
+    }
+
+    .nav-bar-buttons {
+        font-size: 20px;
+    }
+
+    .Hikolakita-Logo {
+        margin-top: 13px;
+    }
+
+    .Hikolakita-txt {
+        margin-top: 33px;
+    }
+
+    .menu-window_text {
+        font-size: 35px;
+    }
+
+    #about {
+        margin-top: 275px;
+    }
+
+    #languages {
+        margin-top: 20%;
+    }
+
+    .container-wrapper {
+        display: flex;
+        justify-content: space-around; /* Distribute space evenly */
+        flex-wrap: wrap; /* Allow wrapping for multiple rows if necessary */
+        gap: 35px; /* Additional spacing between the items */
+        margin-top: 50px;
+        align-items: stretch;
+    }
+
+    .description-container, .skills-container, .languages-container {
+        width: 22%;
+        min-width: 300px; /* Set a minimum width to maintain readability */
+        background: linear-gradient(rgb(192, 201, 255), rgb(200, 165, 223)); /* Gradient background */
+        height: auto;
+        opacity: 0.7;
+        border-radius: 15px; /* Border radius */
+        margin: 20px; /* Adjust margin for spacing */
+        z-index: auto;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.4s;
+        overflow: hidden; /* Prevent scrolling */
+        display: flex;
+        flex-direction: column; /* Ensure the content stacks vertically */
+        align-items: center; /* Center content horizontally */
+        justify-content: flex-start; /* Start content at the top */
+    }
+
+    .description-container, .skills-container, .languages-container::after {
+        content: "";
+        flex:1;
+    }
+    
+    
+
+}
+
+/* Extra large (XL) */
+@media (min-width: 1441px) {
+    /* Your styles for extra large screens */
+}
