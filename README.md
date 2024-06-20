@@ -35,7 +35,7 @@ Case Studies: In-depth write-ups of select projects, detailing the development p
 → Contact
 
 Contact Form: A simple form for visitors to get in touch with me.
-Social Media Links: Icons linking to my profiles on LinkedIn, GitHub, Twitter, etc.
+Social Media Links: Icons linking to my profiles on GitHub, Discord, etc.
 
 • Technologies Used
 
@@ -48,11 +48,11 @@ Social Media Links: Icons linking to my profiles on LinkedIn, GitHub, Twitter, e
 
 Clone the repository:
 
-```git clone https://github.com/yourusername/your-portfolio.git```
+```git clone https://github.com/Hikolakita/Hikolakita.git```
 
 Navigate to the project directory:
 
-```cd your-portfolio```
+```cd Hikolakita```
 
 Install dependencies (if using a JavaScript framework):
 
