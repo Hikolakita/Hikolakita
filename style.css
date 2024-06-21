@@ -7,7 +7,7 @@
 
 /* Body styling */
 body {
-    background-image: url('./Images/Background.png'); /* Background image for the body */
+    background-image: url('Images/Background.png'); /* Background image for the body */
     background-repeat: no-repeat; /* Prevents the background image from repeating */
     background-color: black; /* Fallback background color */
     background-size: cover; /* Ensures the background image covers the entire background */
